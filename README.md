@@ -1,5 +1,7 @@
 # R
 
+![paprika_mask](https://user-images.githubusercontent.com/128937668/233753111-cf3e9133-2bb0-4b9d-b285-79342877a0b5.gif)
+
 ## semana 1: Introdução ao R-Studio
 
 1. **Os softwares R e R-Studio**
