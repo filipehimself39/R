@@ -271,3 +271,156 @@ Com os comandos acima, é possível ter uma breve descrição do que a referida 
 5. **Salvando sua sessão no R**
 
 Para *salvar* seu script, basta ir em File -> Save. Para encerrar, basta apertar o 'X'.
+
+---
+
+## Semana 2: outros objetos no R e o tidyverse
+
+1. **Matrizes**
+
+**Matriz é um objeto r x s**, isto é, possui r linhas e s colunas, na qual **todos os elementos pertencentes ao objeto possuem uma mesma natureza**. O código seguinte exemplifica como **criar uma matriz no R**:
+
+```
+# Criando um matriz com 3 linhas (nrow = 3) e 3 colunas (ncol = 3), sendo preenchida por coluna
+A = matrix(data = c(1,3,4,2,3,4,6,3,9),
+           nrow = 3, 
+           ncol= 3,
+           byrow=FALSE)
+A
+```
+
+```
+#Criando um matriz com 3 linhas (nrow = 3) e 3 colunas (ncol = 3), sendo alimentada por linha (byrow = TRUE)
+B = matrix(data = c(1,3,4,2,3,4,6,3,9),
+           nrow = 3, 
+           ncol= 3, 
+           byrow = TRUE)
+B
+```
+
+---
+
+**Operações com matrizes:**
+
+```
+#Somando matrizes
+A + B
+```
+
+```
+#Realizando uma operação entre um escalar e uma matriz
+3 * A
+```
+
+```
+#Invertendo uma matriz
+solve(A)
+```
+
+```
+## Acessando elementos de uma matriz
+# Segunda coluna
+A[,2]
+```
+
+```
+# Primeira linha
+A[1,]
+```
+
+```
+# Elemento da primeira linha e segunda coluna
+A[1,2]
+```
+
+```
+## Empilhando matrizes
+# Verticalmente
+rbind(A,B)
+```
+
+```
+# Horizontalmente
+cbind(A,B)
+```
+
+---
+
+2. **Operações lógicos e de comparação**
+
+Esses **operadores trabalham sempre com dois valores de retorno possíveis: TRUE (verdadeiro) ou FALSE (falso)**, também denotados pelas letras maiúsculas T e F, respectivamente.
+
+**Operadores de comparação em R**
+
+Também conhecidos como operadores relacionais, **permitem estabelecer a relação entre dois valores de entrada, e retornar um valor lógico verdadeiro ou falso dependendo da relação.**
+
+Por exemplo, um operador de comparação pode comparar dois números e dizer se eles são iguais ou não. Os operadores de comparação em R são os seguintes:
+
+operador | significado
+---|---|
+== | igual a
+!= | diferente de
+(>) | maior que
+(<) | menor que
+(>=) | maior ou igual a
+(<=) | menor ou igual a
+
+**exemplos:**
+
+```
+# Igualdade 
+5==7
+```
+
+```
+# Diferente
+x = 8
+x != 9
+```
+
+```
+# Desigualdades
+x = 4
+x > 3
+```
+
+```
+x < 2
+```
+
+```
+x >= 4
+```
+
+```
+x <= 1
+```
+
+---
+
+**Operadores lógicos em R**
+
+Também conhecidos como **operadores booleanos**, permitem trabalhar com **múltiplas condições relacionais na mesma expressão**, e retornam valores lógicos verdadeiro ou falso.
+
+Os **operadores lógicos mais utilizados** em R são:
+
+&& : operador "E"
+|| : operador "OU" inclusivo
+
+```
+x = 4
+y = 8
+## Operador "E"
+(x > 3) && (y == 8)
+```
+
+```
+## Operador "OU"
+(x > 5) || (y !=8)
+```
+
+---
+
+3. **Valores especiais**
+
+Existem 
